@@ -2,14 +2,13 @@ import java.util.ArrayList;
 
 public class Bin {
     private int capacity;
-    private ArrayList<Integer> contents = new ArrayList<Integer>();
+    private ArrayList<Integer> contents = new ArrayList<>();
 
     public Bin(int givenSize){
         capacity = givenSize;
     }
 
     public ArrayList<Integer> getContents(Bin bin){
-        contents = new ArrayList<Integer>();
         return bin.contents;
     }
 
@@ -30,14 +29,6 @@ public class Bin {
 
     public static void addValue(Bin bin, int value){
         bin.contents.add(value);
-    }
-
-    public static boolean isFull(Bin bin){
-        int totalSize = getCurrentSize(bin);
-        if(totalSize == bin.capacity){
-            return true;
-        }
-        return false;
     }
 
 }
